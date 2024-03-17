@@ -51,4 +51,8 @@ spec:
         volumeMounts:
         - name: config-volume
           mountPath: /opt/grafana-import-dashboards
-      
+      restartPolicy: Never
+      volumes:
+      - name: config-volume
+        configMap:
+          name: grafana-import-dashboards
